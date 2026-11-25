@@ -29,6 +29,15 @@
       "image": "images/products/loop-quiet-2.jpg"
     },
     {
+      "example": false,
+      "category": "sensorial",
+      "name": "Gaoye, lentes con filtro de luz azul",
+      "note": "Para las pantallas de noche: la luz se siente menos agresiva y me cuesta menos desconectar.",
+      "asin": "B0DYKRFTMG",
+      "search": "",
+      "image": "images/products/gaoye-blue-light.jpg"
+    },
+    {
       "example": true,
       "category": "sensorial",
       "name": "Manta con peso",
