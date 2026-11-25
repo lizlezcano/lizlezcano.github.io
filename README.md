@@ -59,6 +59,8 @@ Then open http://localhost:8000. Opening `index.html` directly from disk won't l
 
 ## Deploy
 
-Hosted on **Cloudflare Pages**, connected to this repo. Every push to `main` deploys to https://lizlezcano.com within a minute or two. There's no build step: build command empty, output directory `/`.
+Hosted on **Cloudflare Workers** (static assets, project `lizlezcano-github-io`), connected to this repo. Every push to `main` deploys to https://lizlezcano.com in under a minute. There's no build step.
 
 Cloudflare serves pages without the `.html` extension (`/recursos.html` redirects to `/recursos`).
+
+GitHub Pages is still enabled on purpose: a small script in each page sends visitors of the old `lizlezcano.github.io` address to the same page on `lizlezcano.com`. Don't turn it off, or old links will 404.
