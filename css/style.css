@@ -114,7 +114,7 @@ h3 { font-size: 1.5rem; line-height: 1.2; letter-spacing: -0.01em; }
     line-height: 1;
 }
 
-.signature-lg { font-size: clamp(2.75rem, 2rem + 2.5vw, 4.25rem); margin-top: var(--space-md); }
+.signature.signature-lg { font-size: clamp(4rem, 3rem + 3.5vw, 6rem); line-height: 0.95; margin-top: var(--space-lg); }
 
 /* ---------- Buttons ---------- */
 .btn {
@@ -306,7 +306,7 @@ button:focus-visible {
 .about h2 { color: var(--blush-100); margin-bottom: var(--space-lg); }
 .about p { font-size: var(--size-body-lg); max-width: 34rem; }
 .about p + p { margin-top: var(--space-sm); }
-.about .signature { color: var(--rose-300); }
+.about p.signature { color: var(--rose-300); }
 
 /* ---------- Section heads ---------- */
 .section-head { max-width: 40rem; margin-bottom: var(--space-2xl); }
