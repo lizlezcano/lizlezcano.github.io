@@ -6,6 +6,10 @@
     const filters = document.getElementById('store-filters');
     if (!grid || !filters) return;
 
+    // The affiliate disclosure is only true once an Associates tag is set
+    const disclosure = document.getElementById('affiliate-disclosure');
+    if (disclosure && CONFIG.amazonTag) disclosure.hidden = false;
+
     function amazonUrl(p) {
         const domain = CONFIG.amazonDomain || 'www.amazon.com';
         const url = p.asin

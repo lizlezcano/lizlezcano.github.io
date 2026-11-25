@@ -1,21 +1,113 @@
 {
   "_note": "PLACEHOLDERS. Replace each item with a product Liz recommends. 'asin' is the 10-character Amazon product ID from the product URL (amazon.com/dp/XXXXXXXXXX). 'image' can be a file in images/products/ or left empty for a branded tile. Set 'example': false once a product is real.",
   "categories": [
-    { "id": "sensorial", "name": "Calma sensorial" },
-    { "id": "enfoque", "name": "Enfoque y rutinas" },
-    { "id": "escritura", "name": "Escritura y journaling" },
-    { "id": "libros", "name": "Libros" }
+    {
+      "id": "sensorial",
+      "name": "Calma sensorial"
+    },
+    {
+      "id": "enfoque",
+      "name": "Enfoque y rutinas"
+    },
+    {
+      "id": "escritura",
+      "name": "Escritura y journaling"
+    },
+    {
+      "id": "libros",
+      "name": "Libros"
+    }
   ],
   "products": [
-    { "example": true, "category": "sensorial", "name": "Tapones auditivos para reducir el ruido", "note": "Para el súper, el colectivo o cualquier lugar que se siente demasiado.", "asin": "", "search": "tapones auditivos reduccion ruido", "image": "" },
-    { "example": true, "category": "sensorial", "name": "Manta con peso", "note": "La presión profunda me ayuda a bajar el ritmo antes de dormir.", "asin": "", "search": "manta con peso", "image": "" },
-    { "example": true, "category": "sensorial", "name": "Antifaz para dormir", "note": "Oscuridad total cuando la luz se vuelve ruido.", "asin": "", "search": "antifaz para dormir seda", "image": "" },
-    { "example": true, "category": "enfoque", "name": "Temporizador visual", "note": "Ver el tiempo pasar, en lugar de adivinarlo.", "asin": "", "search": "temporizador visual", "image": "" },
-    { "example": true, "category": "enfoque", "name": "Planner semanal sin fechas", "note": "Sin culpa por las semanas que no lo abro.", "asin": "", "search": "planner semanal sin fechas", "image": "" },
-    { "example": true, "category": "enfoque", "name": "Fidget silencioso", "note": "Para las manos inquietas en reuniones largas.", "asin": "", "search": "fidget silencioso adultos", "image": "" },
-    { "example": true, "category": "escritura", "name": "Cuaderno de tapa dura", "note": "El que uso para mis cartas antes de pasarlas a Substack.", "asin": "", "search": "cuaderno tapa dura punteado", "image": "" },
-    { "example": true, "category": "escritura", "name": "Bolígrafos de gel finos", "note": "Escribir lento también es una forma de calmarse.", "asin": "", "search": "boligrafos gel punta fina", "image": "" },
-    { "example": true, "category": "libros", "name": "Libro sobre autismo en adultas", "note": "Ejemplo: reemplazar por el libro que Liz recomienda.", "asin": "", "search": "libro autismo mujeres adultas", "image": "" },
-    { "example": true, "category": "libros", "name": "Libro sobre TDAH en adultos", "note": "Ejemplo: reemplazar por el libro que Liz recomienda.", "asin": "", "search": "libro tdah adultos", "image": "" }
+    {
+      "example": false,
+      "category": "sensorial",
+      "name": "Loop Quiet 2, tapones para el ruido",
+      "note": "Para el súper, el colectivo o cualquier lugar que se siente demasiado. Bajan el volumen sin aislarte del todo.",
+      "asin": "B0D3V61JC8",
+      "search": "",
+      "image": "images/products/loop-quiet-2.jpg"
+    },
+    {
+      "example": true,
+      "category": "sensorial",
+      "name": "Manta con peso",
+      "note": "La presión profunda me ayuda a bajar el ritmo antes de dormir.",
+      "asin": "",
+      "search": "manta con peso",
+      "image": ""
+    },
+    {
+      "example": true,
+      "category": "sensorial",
+      "name": "Antifaz para dormir",
+      "note": "Oscuridad total cuando la luz se vuelve ruido.",
+      "asin": "",
+      "search": "antifaz para dormir seda",
+      "image": ""
+    },
+    {
+      "example": true,
+      "category": "enfoque",
+      "name": "Temporizador visual",
+      "note": "Ver el tiempo pasar, en lugar de adivinarlo.",
+      "asin": "",
+      "search": "temporizador visual",
+      "image": ""
+    },
+    {
+      "example": true,
+      "category": "enfoque",
+      "name": "Planner semanal sin fechas",
+      "note": "Sin culpa por las semanas que no lo abro.",
+      "asin": "",
+      "search": "planner semanal sin fechas",
+      "image": ""
+    },
+    {
+      "example": true,
+      "category": "enfoque",
+      "name": "Fidget silencioso",
+      "note": "Para las manos inquietas en reuniones largas.",
+      "asin": "",
+      "search": "fidget silencioso adultos",
+      "image": ""
+    },
+    {
+      "example": true,
+      "category": "escritura",
+      "name": "Cuaderno de tapa dura",
+      "note": "El que uso para mis cartas antes de pasarlas a Substack.",
+      "asin": "",
+      "search": "cuaderno tapa dura punteado",
+      "image": ""
+    },
+    {
+      "example": true,
+      "category": "escritura",
+      "name": "Bolígrafos de gel finos",
+      "note": "Escribir lento también es una forma de calmarse.",
+      "asin": "",
+      "search": "boligrafos gel punta fina",
+      "image": ""
+    },
+    {
+      "example": true,
+      "category": "libros",
+      "name": "Libro sobre autismo en adultas",
+      "note": "Ejemplo: reemplazar por el libro que Liz recomienda.",
+      "asin": "",
+      "search": "libro autismo mujeres adultas",
+      "image": ""
+    },
+    {
+      "example": true,
+      "category": "libros",
+      "name": "Libro sobre TDAH en adultos",
+      "note": "Ejemplo: reemplazar por el libro que Liz recomienda.",
+      "asin": "",
+      "search": "libro tdah adultos",
+      "image": ""
+    }
   ]
 }
