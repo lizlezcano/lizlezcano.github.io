@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """Fetch Liz's latest Substack letters into data/letters.json.
 
-Runs daily from .github/workflows/update-letters.yml. Standard library only.
+Run manually: python3 scripts/fetch_letters.py, then commit data/letters.json.
+Standard library only.
 """
 import html
 import json

@@ -59,7 +59,7 @@ function el(tag, attrs = {}, ...children) {
 }
 window.el = el;
 
-// Letters from Substack (data/letters.json, refreshed daily by GitHub Actions)
+// Letters from Substack (data/letters.json, refreshed manually with scripts/fetch_letters.py)
 const letterGrid = document.getElementById('letter-grid');
 if (letterGrid) {
     const limit = Number(letterGrid.dataset.limit) || 6;
