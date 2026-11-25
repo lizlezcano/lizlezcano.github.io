@@ -1,73 +1,92 @@
-// Mobile Navigation Toggle
-const hamburger = document.querySelector('.hamburger');
-const navMenu = document.querySelector('.nav-menu');
+const CONFIG = window.SITE_CONFIG || {};
 
-hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('active');
-    navMenu.classList.toggle('active');
+// Booking links (Calendly) — set once in js/config.js
+document.querySelectorAll('[data-link="booking"]').forEach(a => {
+    a.href = CONFIG.bookingUrl || 'https://instagram.com/lizlezcano_';
 });
 
-document.querySelectorAll('.nav-link').forEach(link => {
-    link.addEventListener('click', () => {
-        hamburger.classList.remove('active');
-        navMenu.classList.remove('active');
-    });
+// Mobile menu
+const toggle = document.querySelector('.nav-toggle');
+const menu = document.querySelector('.nav-menu');
+
+function setMenu(open) {
+    toggle.setAttribute('aria-expanded', String(open));
+    toggle.setAttribute('aria-label', open ? 'Cerrar menú' : 'Abrir menú');
+    menu.classList.toggle('open', open);
+}
+
+toggle.addEventListener('click', () => {
+    setMenu(toggle.getAttribute('aria-expanded') !== 'true');
 });
+menu.querySelectorAll('a').forEach(link => link.addEventListener('click', () => setMenu(false)));
+document.addEventListener('keydown', e => { if (e.key === 'Escape') setMenu(false); });
 
-// Smooth scroll with navbar offset
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            e.preventDefault();
-            window.scrollTo({
-                top: target.offsetTop - 68,
-                behavior: 'smooth'
-            });
-        }
-    });
-});
+// Hairline under the nav once the page scrolls
+const nav = document.querySelector('.nav');
+const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 8);
+window.addEventListener('scroll', onScroll, { passive: true });
+onScroll();
 
-// Back to top
-const backToTop = document.getElementById('backToTop');
+// Slow editorial fade-up as elements enter the viewport
+const revealObserver = 'IntersectionObserver' in window
+    ? new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                revealObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' })
+    : null;
 
-window.addEventListener('scroll', () => {
-    backToTop.classList.toggle('visible', window.pageYOffset > 300);
-});
+function reveal(el) {
+    el.classList.add('reveal');
+    if (revealObserver) revealObserver.observe(el);
+    else el.classList.add('visible');
+}
+window.reveal = reveal;
+document.querySelectorAll('.reveal').forEach(reveal);
 
-backToTop.addEventListener('click', () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-});
+// Small DOM helper shared with store.js
+function el(tag, attrs = {}, ...children) {
+    const node = document.createElement(tag);
+    for (const [k, v] of Object.entries(attrs)) {
+        if (k === 'class') node.className = v;
+        else node.setAttribute(k, v);
+    }
+    children.flat().forEach(c => c != null && node.append(c));
+    return node;
+}
+window.el = el;
 
-// Active nav link on scroll
-window.addEventListener('scroll', () => {
-    const sections = document.querySelectorAll('section[id]');
-    const navLinks = document.querySelectorAll('.nav-link');
-    let current = '';
+// Letters from Substack (data/letters.json, refreshed daily by GitHub Actions)
+const letterGrid = document.getElementById('letter-grid');
+if (letterGrid) {
+    const limit = Number(letterGrid.dataset.limit) || 6;
+    const fmt = new Intl.DateTimeFormat('es', { day: 'numeric', month: 'short', year: 'numeric' });
 
-    sections.forEach(section => {
-        if (window.pageYOffset >= section.offsetTop - 100) {
-            current = section.getAttribute('id');
-        }
-    });
+    fetch('data/letters.json')
+        .then(r => r.ok ? r.json() : Promise.reject(r.status))
+        .then(letters => {
+            letterGrid.replaceChildren(...letters.slice(0, limit).map(l => {
+                const img = el('img', { src: l.image, alt: '', loading: 'lazy' });
+                const card = el('a', { class: 'letter', href: l.url, target: '_blank', rel: 'noopener' },
+                    el('div', { class: 'letter-img' }, img),
+                    el('time', { datetime: l.date }, fmt.format(new Date(l.date + 'T12:00:00')).replace('.', '')),
+                    el('h3', {}, l.title),
+                    el('p', {}, l.subtitle)
+                );
+                reveal(card);
+                return card;
+            }));
+        })
+        .catch(() => {
+            letterGrid.replaceChildren(el('p', { class: 'fine-print' },
+                'Lee todas mis cartas en ',
+                el('a', { href: 'https://lezcanoliz.substack.com/archive' }, 'lezcanoliz.substack.com'), '.'));
+        });
+}
 
-    navLinks.forEach(link => {
-        link.classList.toggle('active', link.getAttribute('href') === `#${current}`);
-    });
-});
-
-// Fade-up animation on scroll
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-            observer.unobserve(entry.target);
-        }
-    });
-}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
-
-document.querySelectorAll('.service-card, .writing-card, .contact-card, .about-inner').forEach((el, i) => {
-    el.classList.add('fade-up');
-    el.style.transitionDelay = `${i * 0.08}s`;
-    observer.observe(el);
-});
+// Footer year
+const year = document.getElementById('year');
+if (year) year.textContent = new Date().getFullYear();

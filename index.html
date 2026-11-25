@@ -3,252 +3,182 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Liz Lezcano | Coach de Bienestar Emocional</title>
-    <meta name="description" content="Acompaño personas en su camino hacia el bienestar emocional a través de la escritura reflexiva y el autoconocimiento.">
-    <link rel="icon" type="image/png" href="images/favicon.ico">
+    <title>Liz Lezcano | Coaching TEA y TDAH</title>
+    <meta name="description" content="Coaching 1:1 para personas con TEA y TDAH, desde mi propia experiencia con el autismo. Cartas, recursos y sesiones con Liz Lezcano.">
+    <meta name="theme-color" content="#461224">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://lizlezcano.github.io/">
+    <meta property="og:title" content="Liz Lezcano | Coaching TEA y TDAH">
+    <meta property="og:description" content="Coaching 1:1 para personas con TEA y TDAH, desde mi propia experiencia con el autismo.">
+    <meta property="og:image" content="https://lizlezcano.github.io/images/liz-portrait.jpg">
+    <meta property="og:locale" content="es_PY">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <link rel="icon" href="images/favicon.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
-    <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;1,400&family=Mrs+Saint+Delafield&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="#home" class="nav-logo">Liz Lezcano</a>
-            <ul class="nav-menu">
-                <li><a href="#home" class="nav-link">Inicio</a></li>
-                <li><a href="#about" class="nav-link">Sobre mí</a></li>
-                <li><a href="#services" class="nav-link">Servicios</a></li>
-                <li><a href="#writing" class="nav-link">Escritos</a></li>
-                <li><a href="#contact" class="nav-link">Contacto</a></li>
-            </ul>
-            <button class="hamburger" aria-label="Abrir menú">
-                <span></span>
-                <span></span>
-                <span></span>
+    <header class="nav">
+        <div class="nav-inner">
+            <a href="./" class="nav-logo">Liz Lezcano</a>
+            <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-menu">
+                <span></span><span></span>
             </button>
+            <nav id="nav-menu" class="nav-menu">
+                <a href="#sobre-mi">Sobre mí</a>
+                <a href="#sesiones">Sesiones</a>
+                <a href="#cartas">Cartas</a>
+                <a href="recursos.html">Recursos</a>
+                <a href="#cursos">Cursos</a>
+                <a href="#" data-link="booking" class="btn btn-wine btn-sm" target="_blank" rel="noopener">Reserva una sesión</a>
+            </nav>
         </div>
-    </nav>
+    </header>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-inner">
-            <div class="hero-text">
-                <span class="hero-label">Coach de Bienestar Emocional</span>
-                <h1>Tu espacio para sanar y conocerte</h1>
-                <p class="hero-desc">Acompaño personas en su camino hacia el equilibrio emocional a través de la escritura reflexiva, el autoconocimiento y la exploración auténtica del mundo interior.</p>
-                <div class="hero-actions">
-                    <a href="#contact" class="btn-primary">Agenda una sesión</a>
-                    <a href="#about" class="btn-outline">Conoce más</a>
+    <main>
+        <!-- Hero -->
+        <section class="hero">
+            <div class="container hero-inner">
+                <div class="hero-text reveal">
+                    <span class="eyebrow">Coaching para personas neurodivergentes</span>
+                    <h1>Entender cómo funciona tu mente también es sanar.</h1>
+                    <p class="lede">Soy Liz, vivo con autismo y acompaño a personas con TEA y TDAH a entender su forma de sentir, pensar y descansar, sin forzarse a encajar.</p>
+                    <div class="hero-actions">
+                        <a href="#" data-link="booking" class="btn btn-wine" target="_blank" rel="noopener">Reserva una sesión</a>
+                        <a href="#cartas" class="btn btn-ghost">Lee mis cartas</a>
+                    </div>
                 </div>
-                <div class="hero-social">
-                    <a href="https://instagram.com/lezcanolizma" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="https://tiktok.com/@lezcanolizma" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
-                        <i class="fab fa-tiktok"></i>
-                    </a>
-                    <a href="https://threads.net/@lezcanolizma" target="_blank" rel="noopener noreferrer" aria-label="Threads">
-                        <i class="fab fa-threads"></i>
-                    </a>
-                    <a href="mailto:lezcanolizma@gmail.com" aria-label="Email">
-                        <i class="fas fa-envelope"></i>
-                    </a>
-                </div>
+                <figure class="hero-photo reveal">
+                    <img src="images/liz-portrait.jpg" alt="Liz Lezcano apoyada en el respaldo de una silla" width="1100" height="1375">
+                    <figcaption class="signature">— Liz</figcaption>
+                </figure>
             </div>
-            <div class="hero-image">
-                <div class="hero-image-wrap">
-                    <img src="images/profile-liz.jpg" alt="Liz Lezcano">
-                </div>
-                <div class="hero-image-badge">
-                    <span>mi mundo interior</span>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <div class="about-inner">
-                <div class="about-image">
-                    <img src="images/writer.jpg" alt="Liz escribiendo">
-                </div>
-                <div class="about-text">
-                    <span class="section-label">Sobre mí</span>
-                    <h2>Un espacio de encuentro contigo misma</h2>
-                    <p>Soy Liz, coach de bienestar emocional y escritora. Creo firmemente que las palabras tienen el poder de sanar, de clarificar y de conectarnos con nuestra verdad más profunda.</p>
-                    <p>Mi enfoque combina la escritura reflexiva con el acompañamiento emocional, creando un espacio seguro donde puedas explorar tus emociones, romper patrones limitantes y construir una relación más compasiva contigo misma.</p>
-                    <p>A través de mi publicación <em>mi mundo interior</em>, comparto reflexiones y herramientas para el autoconocimiento que llegan directo a tu corazón.</p>
-                    <a href="https://lizlezcano.substack.com/" target="_blank" rel="noopener noreferrer" class="btn-primary">Leer mi newsletter</a>
+        <!-- Sobre mí -->
+        <section id="sobre-mi" class="about">
+            <div class="container about-inner">
+                <figure class="about-photo reveal">
+                    <img src="images/liz-editorial.jpg" alt="Retrato en blanco y negro de Liz Lezcano, sonriendo" width="1000" height="1250" loading="lazy">
+                </figure>
+                <div class="about-text reveal">
+                    <span class="eyebrow">Sobre mí</span>
+                    <h2>Soy Liz.</h2>
+                    <p>Descubrí mi diagnóstico de autismo de adulta, y muchas cosas de mi vida empezaron a tener sentido. Desde ahí escribo y acompaño: con honestidad, sin fórmulas y a tu ritmo.</p>
+                    <p>Terminé el cursado de la carrera de Fonoaudiología y estoy completando mi certificación en coaching. Cada semana escribo cartas íntimas en Substack sobre mi proceso y las herramientas que me acompañan.</p>
+                    <p class="signature signature-lg">Con amor,<br>Liz</p>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Services Section -->
-    <section id="services" class="services">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-label">Servicios</span>
-                <h2>¿Cómo puedo acompañarte?</h2>
-                <p>Cada persona tiene su propio ritmo y camino. Aquí encontrarás el espacio que necesitas.</p>
-            </div>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-heart"></i>
-                    </div>
-                    <h3>Acompañamiento Emocional</h3>
-                    <p>Sesiones individuales para explorar tus emociones, identificar patrones y construir herramientas para tu bienestar día a día.</p>
+        <!-- Sesiones -->
+        <section id="sesiones" class="sessions">
+            <div class="container sessions-inner">
+                <div class="sessions-text reveal">
+                    <span class="eyebrow">Sesiones</span>
+                    <h2>Coaching 1:1 para TEA y TDAH</h2>
+                    <p class="lede">Un espacio online, sin juicio, para entender lo que te pasa y construir una vida que respete cómo funcionas.</p>
+                    <a href="#" data-link="booking" class="btn btn-wine" target="_blank" rel="noopener">Elige tu horario</a>
+                    <p class="fine-print">El coaching no reemplaza la atención médica ni psicológica. Si estás atravesando una crisis, busca apoyo profesional.</p>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-pen-nib"></i>
-                    </div>
-                    <h3>Escritura Reflexiva</h3>
-                    <p>Talleres y guías que usan la escritura como puerta de entrada al autoconocimiento y la sanación emocional.</p>
+                <ol class="session-list reveal">
+                    <li>
+                        <h3>Entender tu diagnóstico</h3>
+                        <p>O la sospecha de uno: qué significa para ti, más allá de los libros.</p>
+                    </li>
+                    <li>
+                        <h3>Rutinas que respetan tu energía</h3>
+                        <p>Organizar el día sin pelearte con tu propia cabeza.</p>
+                    </li>
+                    <li>
+                        <h3>Sobrecarga sensorial y descanso</h3>
+                        <p>Reconocer las señales a tiempo y armar tu propio refugio.</p>
+                    </li>
+                    <li>
+                        <h3>Decir lo que necesitas</h3>
+                        <p>En casa, en tus vínculos y en el trabajo.</p>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- Cartas -->
+        <section id="cartas" class="letters">
+            <div class="container">
+                <div class="section-head reveal">
+                    <span class="eyebrow">Cartas</span>
+                    <h2>Desde mi vida, en voz alta</h2>
+                    <p>Escribo sobre lo que vivo: el diagnóstico, los días difíciles, los libros, las ideas que no me dejan dormir.</p>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-seedling"></i>
-                    </div>
-                    <h3>Comunidad Interior</h3>
-                    <p>Únete a mi newsletter y accede a reflexiones semanales, ejercicios y recursos para tu crecimiento personal.</p>
+                <div class="letter-grid" id="letter-grid" data-limit="6">
+                    <noscript><p>Lee todas mis cartas en <a href="https://lezcanoliz.substack.com/archive">lezcanoliz.substack.com</a>.</p></noscript>
+                </div>
+                <div class="section-more reveal">
+                    <a href="https://lezcanoliz.substack.com/archive" class="btn btn-ghost" target="_blank" rel="noopener">Ver todas las cartas</a>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Featured Writing Section -->
-    <section id="writing" class="writing">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-label">Escritos</span>
-                <h2>Reflexiones desde adentro</h2>
-                <p>Pensamientos que nacen desde lo más profundo del ser.</p>
+        <!-- Recursos -->
+        <section class="resources">
+            <div class="container">
+                <div class="section-head reveal">
+                    <span class="eyebrow">Recursos</span>
+                    <h2>Lo que uso y recomiendo</h2>
+                    <p>Cosas que me ayudan con el ruido, el enfoque y la escritura. Las elegí yo, una por una.</p>
+                </div>
+                <div class="resource-tiles">
+                    <a href="recursos.html#sensorial" class="resource-tile reveal"><span class="eyebrow">01</span><h3>Calma sensorial</h3></a>
+                    <a href="recursos.html#enfoque" class="resource-tile reveal"><span class="eyebrow">02</span><h3>Enfoque y rutinas</h3></a>
+                    <a href="recursos.html#escritura" class="resource-tile reveal"><span class="eyebrow">03</span><h3>Escritura y journaling</h3></a>
+                    <a href="recursos.html#libros" class="resource-tile reveal"><span class="eyebrow">04</span><h3>Libros</h3></a>
+                </div>
+                <div class="section-more reveal">
+                    <a href="recursos.html" class="btn btn-ghost">Ver todos los recursos</a>
+                </div>
             </div>
-            <div class="writing-grid">
-                <article class="writing-card">
-                    <div class="card-image-wrap">
-                        <img src="images/no-confien.jpeg" alt="No confíen 100% en el personal de salud">
-                    </div>
-                    <div class="card-body">
-                        <span class="card-tag">Salud</span>
-                        <h3>No confíen 100% en el personal de salud</h3>
-                        <p>Mi compañera no trajo tapabocas y está muy enferma. Lo que esto me enseñó sobre el autocuidado y la responsabilidad compartida.</p>
-                        <div class="card-footer">
-                            <span>NOV 14 · 1 min</span>
-                            <span class="card-likes">♥ 1</span>
-                        </div>
-                    </div>
-                </article>
+        </section>
 
-                <article class="writing-card">
-                    <div class="card-image-wrap">
-                        <img src="images/las-paradojas.jpeg" alt="Las paradojas de la vida">
-                    </div>
-                    <div class="card-body">
-                        <span class="card-tag">Reflexión</span>
-                        <h3>Las paradojas de la vida</h3>
-                        <p>Siempre hay algo que nos contradice, porque la evolución viene de romper el cascarón.</p>
-                        <div class="card-footer">
-                            <span>NOV 12 · 2 min</span>
-                        </div>
-                    </div>
-                </article>
+        <!-- Cursos -->
+        <section id="cursos" class="subscribe">
+            <div class="container subscribe-inner reveal">
+                <span class="eyebrow">Próximamente</span>
+                <h2>Cursos para entenderte a tu ritmo.</h2>
+                <p>Estoy preparando cursos sobre TEA y TDAH en la vida adulta. Suscríbete a mis cartas y te aviso primero cuando abran.</p>
+                <a href="https://lezcanoliz.substack.com/subscribe" class="btn btn-blush" target="_blank" rel="noopener">Avísame cuando abran</a>
+            </div>
+        </section>
+    </main>
 
-                <article class="writing-card">
-                    <div class="card-image-wrap">
-                        <img src="images/mi-perrita.webp" alt="Mi perrita casi traga cinta scotch">
-                    </div>
-                    <div class="card-body">
-                        <span class="card-tag">Vida</span>
-                        <h3>Mi perrita casi traga cinta scotch</h3>
-                        <p>Hoy fue un día lleno de emociones bonitas. AL FIN, y quiero compartirlo con ustedes.</p>
-                        <div class="card-footer">
-                            <span>NOV 13 · 3 min</span>
-                        </div>
-                    </div>
-                </article>
-            </div>
-            <div class="writing-cta">
-                <a href="https://lizlezcano.substack.com/" target="_blank" rel="noopener noreferrer" class="btn-outline">Ver todos los escritos</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Newsletter Section -->
-    <section class="newsletter">
-        <div class="container">
-            <div class="newsletter-inner">
-                <span class="section-label light">Newsletter</span>
-                <h2>Únete a mi mundo interior</h2>
-                <p>Recibe reflexiones semanales, ejercicios de autoconocimiento y recursos para tu bienestar emocional — directo en tu correo.</p>
-                <a href="https://lizlezcano.substack.com/subscribe" target="_blank" rel="noopener noreferrer" class="btn-white">Suscribirse gratis</a>
-                <p class="newsletter-note">Sin spam. Solo pensamientos auténticos.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-label">Contacto</span>
-                <h2>Hablemos</h2>
-                <p>Me encantaría acompañarte en tu camino. Escríbeme y comenzamos.</p>
-            </div>
-            <div class="contact-grid">
-                <a href="mailto:lezcanolizma@gmail.com" class="contact-card">
-                    <div class="contact-icon"><i class="fas fa-envelope"></i></div>
-                    <h4>Email</h4>
-                    <span>lezcanolizma@gmail.com</span>
-                </a>
-                <a href="https://instagram.com/lezcanolizma" target="_blank" rel="noopener noreferrer" class="contact-card">
-                    <div class="contact-icon"><i class="fab fa-instagram"></i></div>
-                    <h4>Instagram</h4>
-                    <span>@lezcanolizma</span>
-                </a>
-                <a href="https://tiktok.com/@lezcanolizma" target="_blank" rel="noopener noreferrer" class="contact-card">
-                    <div class="contact-icon"><i class="fab fa-tiktok"></i></div>
-                    <h4>TikTok</h4>
-                    <span>@lezcanolizma</span>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <div class="footer-inner">
-                <div class="footer-brand">
+            <div class="footer-top">
+                <div>
                     <span class="footer-logo">Liz Lezcano</span>
-                    <p>Coach de Bienestar Emocional · mi mundo interior</p>
+                    <p class="footer-tag">Lo que deseas, te desea más a ti.</p>
                 </div>
-                <div class="footer-social">
-                    <a href="https://instagram.com/lezcanolizma" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="https://tiktok.com/@lezcanolizma" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
-                    <a href="https://threads.net/@lezcanolizma" target="_blank" rel="noopener noreferrer" aria-label="Threads"><i class="fab fa-threads"></i></a>
-                    <a href="https://lizlezcano.substack.com/" target="_blank" rel="noopener noreferrer" aria-label="Substack"><i class="fas fa-newspaper"></i></a>
-                </div>
+                <ul class="footer-social">
+                    <li><a href="https://instagram.com/lizlezcano_" target="_blank" rel="noopener">Instagram</a></li>
+                    <li><a href="https://www.threads.net/@lizlezcano_" target="_blank" rel="noopener">Threads</a></li>
+                    <li><a href="https://x.com/lizlezcano_" target="_blank" rel="noopener">X</a></li>
+                    <li><a href="https://lezcanoliz.substack.com" target="_blank" rel="noopener">Substack</a></li>
+                </ul>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Liz Lezcano. Hecho con amor para acompañar almas auténticas.</p>
+            <div class="footer-mark">
+                <a href="https://lezcanoliz.substack.com" target="_blank" rel="noopener">lezcanoliz.substack.com</a>
+                <svg viewBox="0 0 44 54" width="22" height="27" aria-hidden="true"><path d="M0 0h44v6H0zM0 12h44v6H0zM0 24h44v30L22 42 0 54z"/></svg>
             </div>
+            <p class="footer-copy">&copy; <span id="year">2026</span> Liz Lezcano</p>
         </div>
     </footer>
 
-    <!-- Back to Top -->
-    <button id="backToTop" class="back-to-top" aria-label="Volver arriba">
-        <i class="fas fa-chevron-up"></i>
-    </button>
-
+    <script src="js/config.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>
