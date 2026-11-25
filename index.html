@@ -3,15 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        // Old GitHub Pages address → send visitors to the real domain, same page
+        if (location.hostname.endsWith('github.io')) {
+            location.replace('https://lizlezcano.com' + location.pathname.replace(/\.html$/, '').replace(/\/index$/, '/') + location.search + location.hash);
+        }
+    </script>
     <title>Liz Lezcano | Coaching TEA y TDAH</title>
     <meta name="description" content="Coaching 1:1 para personas con TEA y TDAH, desde mi propia experiencia con el autismo. Cartas, recursos y sesiones con Liz Lezcano.">
     <meta name="theme-color" content="#461224">
 
+    <link rel="canonical" href="https://lizlezcano.com/">
+
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://lizlezcano.github.io/">
+    <meta property="og:url" content="https://lizlezcano.com/">
     <meta property="og:title" content="Liz Lezcano | Coaching TEA y TDAH">
     <meta property="og:description" content="Coaching 1:1 para personas con TEA y TDAH, desde mi propia experiencia con el autismo.">
-    <meta property="og:image" content="https://lizlezcano.github.io/images/liz-portrait.jpg">
+    <meta property="og:image" content="https://lizlezcano.com/images/liz-portrait.jpg">
     <meta property="og:locale" content="es_PY">
     <meta name="twitter:card" content="summary_large_image">
 

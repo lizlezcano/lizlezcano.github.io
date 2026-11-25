@@ -2,7 +2,7 @@
 
 Website for **Liz Lezcano**: coaching 1:1 for people with TEA and TDAH, her Substack letters, and the resources she recommends.
 
-Live at **https://lizlezcano.github.io/**
+Live at **https://lizlezcano.com/**
 
 ## Structure
 
@@ -59,4 +59,6 @@ Then open http://localhost:8000. Opening `index.html` directly from disk won't l
 
 ## Deploy
 
-GitHub Pages serves the `main` branch from the root. Pushing to `main` publishes within a minute or two.
+Hosted on **Cloudflare Pages**, connected to this repo. Every push to `main` deploys to https://lizlezcano.com within a minute or two. There's no build step: build command empty, output directory `/`.
+
+Cloudflare serves pages without the `.html` extension (`/recursos.html` redirects to `/recursos`).

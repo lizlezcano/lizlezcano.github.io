@@ -3,15 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        // Old GitHub Pages address → send visitors to the real domain, same page
+        if (location.hostname.endsWith('github.io')) {
+            location.replace('https://lizlezcano.com' + location.pathname.replace(/\.html$/, '').replace(/\/index$/, '/') + location.search + location.hash);
+        }
+    </script>
     <title>Recursos | Liz Lezcano</title>
     <meta name="description" content="Lo que uso y recomiendo para la calma sensorial, el enfoque, la escritura y entender el TEA y el TDAH.">
     <meta name="theme-color" content="#461224">
 
+    <link rel="canonical" href="https://lizlezcano.com/recursos">
+
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://lizlezcano.github.io/recursos.html">
+    <meta property="og:url" content="https://lizlezcano.com/recursos">
     <meta property="og:title" content="Recursos | Liz Lezcano">
     <meta property="og:description" content="Lo que uso y recomiendo, elegido una por una.">
-    <meta property="og:image" content="https://lizlezcano.github.io/images/liz-portrait.jpg">
+    <meta property="og:image" content="https://lizlezcano.com/images/liz-portrait.jpg">
     <meta name="twitter:card" content="summary_large_image">
 
     <link rel="icon" href="images/favicon.ico" sizes="48x48">
